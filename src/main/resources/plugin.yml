@@ -1,0 +1,16 @@
+name: RconSecurity
+version: '${version}'
+main: tw.rconsecurity.RconSecurity
+api-version: '26.2'
+author: moses0823
+folia-supported: true
+description: Adds a challenge-response authentication gateway in front of native RCON.
+commands:
+  rconsecurity:
+    description: Manage the RconSecurity gateway.
+    usage: /rconsecurity <reload|status|clients|block|unblock>
+    permission: rconsecurity.admin
+permissions:
+  rconsecurity.admin:
+    description: Allows access to RconSecurity administrative commands.
+    default: op

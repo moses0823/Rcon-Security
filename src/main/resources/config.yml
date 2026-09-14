@@ -1,0 +1,39 @@
+secure-rcon:
+  enabled: true
+  host: "0.0.0.0"
+  port: 25576
+
+protocol:
+  max-packet-size: 4096
+  handshake-timeout-ms: 5000
+
+time-step: 30
+allowed-clock-drift: 1
+
+security:
+  max-auth-attempts: 5
+  auth-failure-window: 60
+  temporary-block-time: 300
+  max-connections: 32
+  handshake-timeout-ms: 5000
+
+clients:
+  moses:
+    enabled: true
+    secret: "CHANGE-ME"
+  backup:
+    enabled: true
+    secret: "CHANGE-ME"
+  monitoring:
+    enabled: false
+    secret: "CHANGE-ME"
+
+native-rcon:
+  host: "127.0.0.1"
+  port: 25575
+  password: "CHANGE-ME"
+
+logging:
+  successful-auth: true
+  failed-auth: true
+  commands: false

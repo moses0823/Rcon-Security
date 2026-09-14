@@ -1,0 +1,36 @@
+import org.gradle.language.jvm.tasks.ProcessResources
+
+plugins {
+    id 'java'
+}
+
+group = 'tw.rconsecurity'
+version = '1.0.0'
+
+repositories {
+    maven {
+        name = 'papermc'
+        url = uri('https://repo.papermc.io/repository/maven-public/')
+    }
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:26.2.build.+'
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(25)
+}
+
+tasks.named('jar') {
+    archiveBaseName = 'RconSecurity'
+}
+
+tasks.named('processResources', ProcessResources) {
+    def props = [version: project.version]
+    inputs.properties(props)
+    filteringCharset = 'UTF-8'
+    filesMatching('plugin.yml') {
+        expand(props)
+    }
+}
