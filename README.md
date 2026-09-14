@@ -28,6 +28,13 @@ Gateway 預設監聽 `0.0.0.0:25576`，原生 RCON 預設連線 `127.0.0.1:25575
 - Paper 或 Folia 26.2
 - Gradle Wrapper（專案已包含）
 
+## 使用前提
+
+請將本專案建置出的 `RconSecurity` JAR 安裝到 Minecraft server 的
+`plugins` 目錄並啟用插件。外部 Secure RCON 連線必須使用相容的
+[moses0823/Rcon-cli](https://github.com/moses0823/Rcon-cli) 用戶端；一般 Minecraft RCON client 無法使用本插件的
+challenge-response 協議。
+
 ## 建置
 
 Windows：

@@ -32,6 +32,14 @@ If the Gateway is exposed to an untrusted network, use a VPN, private network, o
 * Paper or Folia 26.2
 * Gradle Wrapper (included with the project)
 
+## Prerequisites
+
+Build this project and install the resulting `RconSecurity` JAR in the
+Minecraft server's `plugins` directory, then enable the plugin. External
+Secure RCON connections must use a compatible [moses0823/Rcon-cli](https://github.com/moses0823/Rcon-cli) client; ordinary
+Minecraft RCON clients do not support this plugin's challenge-response
+protocol.
+
 ## Building
 
 ### Windows
